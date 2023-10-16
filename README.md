@@ -1,38 +1,18 @@
-# Welcome to Remix!
+1. `npm install`
 
-- [Remix Docs](https://remix.run/docs)
+2. `npm run dev`
 
-## Development
+3. Check out the cool <Tabs> from build on react-aria at `localhost:3000`
 
-From your terminal:
+4. Run `npx tsc`
 
-```sh
-npm run dev
+5. Observe the TypeScript compile error:
+
 ```
+$ npx tsc
+node_modules/react-aria/dist/types.d.ts:46:35 - error TS2305: Module '"@react-aria/utils"' has no exported member 'RouterProvider'.
 
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
+46 export {chain, mergeProps, useId, RouterProvider} from '@react-aria/utils';
+                                     ~~~~~~~~~~~~~~
+Found 1 error in node_modules/react-aria/dist/types.d.ts:46
 ```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`

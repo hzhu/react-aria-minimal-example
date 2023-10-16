@@ -1,4 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
+import { Item } from "react-stately";
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import { Tabs } from '~/components/tabs'
+import tabs  from '~/styles/tabs.css'
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,10 +10,17 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: tabs }];
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
+      <Tabs>
+      <Item title="Recent">Recent</Item>
+      <Item title="Favorites">Favorites</Item>
+      <Item title="All">All</Item>
+    </Tabs>
       <ul>
         <li>
           <a
