@@ -2,7 +2,7 @@
 
 2. `npm run dev`
 
-3. Check out the cool <Tabs> from build on react-aria at `localhost:3000`
+3. Check out the cool `<Tabs>` from build on react-aria at `localhost:3000`
 
 4. Run `npx tsc`
 
